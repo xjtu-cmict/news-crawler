@@ -1,0 +1,77 @@
+log:
+  log_path: "./log"
+  log_file: "web-crawler"
+  log_rotation: "1 week"
+  log_retention: "3 week"
+
+peplenews:
+  headers:
+    Accept: 'application/json, text/plain, */*'
+    Content-Type: 'application/json'
+    Cookie: '__jsluid_h=a1e4ca30a908df8437337c0cf90bfb68; sso_c=0; sfr=1'
+    Host: 'search.people.cn'
+    Origin: 'http://search.people.cn'
+    Referer: ''
+    User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+  payloads:
+    endTime: 0
+    hasContent: True
+    hasTitle: True
+    isFuzzy: True
+    key: ''
+    limit: 10
+    page: 0
+    sortType: 2
+    startTime: 0
+    type: 1
+  referer_base: 'http://search.people.cn/s/?keyword={}&st=1&_=1705983330561'
+  people_search_url: 'http://search.people.cn/search-platform/front/search'
+
+get_headers:
+  user-agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+
+chinanews:
+  page_url_base: 'https://sou.chinanews.com.cn/search.do?q={}&ps=10&start={}&type=&sort=pubtime&time_scope=0&channel=all&adv=1&day1=&day2=&field=&creator='
+  
+policy_ckcest:
+  headers:
+    Accept: 'application/json, text/javascript, */*; q=0.01'
+    Content-Type: 'application/json'
+    Cookie: 'tfstk=fs6oMl2pv_R5kfiLrtv73Cq8yJFvF49BSwHpJpLUgE8jeYpRYe4h8ND-pMz5tZjClHHLNwQDTNQ12YLLVBo5nNDKezN5YvvpLPUTBRISVp9UWj61fRTWAi8FRausGg9BLrL6QHZCVNY8ORVkLov2xhlyLekzmE-WuY-EUHu4mHT28pREaio2bHxEab-ri-PyP9WV3lp4SdacJOXDqIPA4Er5QtxkNFSPEvkUb3Ak7g80W-RU8ISBt9iIKBjP1wtNz4zHRtjVU17akbLPsHjOtgyr3LB541RFQyGFVLTk3T5iYvSDEUQHqI0uoFW50O92MRrG0t_RVtjKYJ-AWES5Up2afLvyzKxfprMy-s5FeQ9IzyYCniWPtgrqgfz76vt4vtlIOQ-XmF6gnYTPghUejoqm_kOyc3TTmocIOQ-XmFE0mfyBantWW; projectlib-securitycas-cookie=b862e44f-35b4-4c94-82da-a79beef83d8d; SESSION=M2E0YzU5MTUtYTNkNS00MmFmLWFiZWItM2NiZGE5ZmUxMzM1; Hm_lvt_789fd650fa0be6a2a064d019d890b87f=1714115411,1714288101,1714467360,1715256037; Hm_lvt_ebdae93fc0f3ab51e390feccb7dd3e14=1714115411,1714288101,1714467360,1715256037; Hm_lvt_b5f82f8b48cb1b9d3aa2d563ead70066=1714115411,1714288101,1714467360,1715256037; _Collect_ISNEW=1715256037090; _Collect_UD=822f9a37-90b0-4623-92db-f4ea9aa620a4; Hm_lvt_723370d3ae383d003bd1044420f79bab=1714115411,1714288101,1714467360,1715256037; acw_tc=b65cfd2a17152582020228958e766d0d5a55dd515ccec7a38bf80e7611a43e; Hm_lpvt_b5f82f8b48cb1b9d3aa2d563ead70066=1715258206; Hm_lpvt_ebdae93fc0f3ab51e390feccb7dd3e14=1715258206; Hm_lpvt_723370d3ae383d003bd1044420f79bab=1715258207; _YS_userAccect=8735b77b-3302-42c2-9aa7-a02fa171620b; _Collect_SN=0; Hm_lpvt_789fd650fa0be6a2a064d019d890b87f=1715258218'
+    Host: 'policy.ckcest.cn'
+    Origin: 'https://policy.ckcest.cn'
+    Referer: ''
+    User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+  payloads:
+    type: ["1005"]
+    page: 0
+    cnt: 20
+    secondSearchExpress: ""
+    order: 1
+  referer_base_title: 'https://policy.ckcest.cn/search?policyType=&shortname=TI&word={}'
+  referer_base_text: 'https://policy.ckcest.cn/search?shortname=THEME&word={}'
+  search_url: 'https://policy.ckcest.cn/data/es/search'
+  cookie_title: 'tfstk=fs6oMl2pv_R5kfiLrtv73Cq8yJFvF49BSwHpJpLUgE8jeYpRYe4h8ND-pMz5tZjClHHLNwQDTNQ12YLLVBo5nNDKezN5YvvpLPUTBRISVp9UWj61fRTWAi8FRausGg9BLrL6QHZCVNY8ORVkLov2xhlyLekzmE-WuY-EUHu4mHT28pREaio2bHxEab-ri-PyP9WV3lp4SdacJOXDqIPA4Er5QtxkNFSPEvkUb3Ak7g80W-RU8ISBt9iIKBjP1wtNz4zHRtjVU17akbLPsHjOtgyr3LB541RFQyGFVLTk3T5iYvSDEUQHqI0uoFW50O92MRrG0t_RVtjKYJ-AWES5Up2afLvyzKxfprMy-s5FeQ9IzyYCniWPtgrqgfz76vt4vtlIOQ-XmF6gnYTPghUejoqm_kOyc3TTmocIOQ-XmFE0mfyBantWW; acw_tc=3ccdc15317141154052504232e64be78b90499f2e7a06377b576a1e01f7288; projectlib-securitycas-cookie=4920b345-c222-4cc9-820a-d0129088c4d7; Hm_lvt_789fd650fa0be6a2a064d019d890b87f=1714052149,1714115411; _Collect_ISNEW=1714115411209; _Collect_UD=df2b4b77-6cda-4679-87ed-b5717b81cddd; Hm_lvt_ebdae93fc0f3ab51e390feccb7dd3e14=1714052149,1714115411; Hm_lvt_723370d3ae383d003bd1044420f79bab=1714052149,1714115411; Hm_lvt_b5f82f8b48cb1b9d3aa2d563ead70066=1714052149,1714115411; SESSION=MTBjNjIyYzctZWVhMS00MWY4LTkzZTktZjViYjZmZDg1NTkx; _YS_userAccect=1d33c316-1848-4461-a8a7-cf7abdf9e723; _Collect_SN=0; Hm_lpvt_789fd650fa0be6a2a064d019d890b87f=1714115556; Hm_lpvt_b5f82f8b48cb1b9d3aa2d563ead70066=1714115556; Hm_lpvt_ebdae93fc0f3ab51e390feccb7dd3e14=1714115556; Hm_lpvt_723370d3ae383d003bd1044420f79bab=1714115556'
+  cookie_text: 'tfstk=fs6oMl2pv_R5kfiLrtv73Cq8yJFvF49BSwHpJpLUgE8jeYpRYe4h8ND-pMz5tZjClHHLNwQDTNQ12YLLVBo5nNDKezN5YvvpLPUTBRISVp9UWj61fRTWAi8FRausGg9BLrL6QHZCVNY8ORVkLov2xhlyLekzmE-WuY-EUHu4mHT28pREaio2bHxEab-ri-PyP9WV3lp4SdacJOXDqIPA4Er5QtxkNFSPEvkUb3Ak7g80W-RU8ISBt9iIKBjP1wtNz4zHRtjVU17akbLPsHjOtgyr3LB541RFQyGFVLTk3T5iYvSDEUQHqI0uoFW50O92MRrG0t_RVtjKYJ-AWES5Up2afLvyzKxfprMy-s5FeQ9IzyYCniWPtgrqgfz76vt4vtlIOQ-XmF6gnYTPghUejoqm_kOyc3TTmocIOQ-XmFE0mfyBantWW; projectlib-securitycas-cookie=b862e44f-35b4-4c94-82da-a79beef83d8d; SESSION=M2E0YzU5MTUtYTNkNS00MmFmLWFiZWItM2NiZGE5ZmUxMzM1; Hm_lvt_789fd650fa0be6a2a064d019d890b87f=1714115411,1714288101,1714467360,1715256037; Hm_lvt_ebdae93fc0f3ab51e390feccb7dd3e14=1714115411,1714288101,1714467360,1715256037; Hm_lvt_b5f82f8b48cb1b9d3aa2d563ead70066=1714115411,1714288101,1714467360,1715256037; _Collect_ISNEW=1715256037090; _Collect_UD=822f9a37-90b0-4623-92db-f4ea9aa620a4; Hm_lvt_723370d3ae383d003bd1044420f79bab=1714115411,1714288101,1714467360,1715256037; acw_tc=b65cfd2a17152582020228958e766d0d5a55dd515ccec7a38bf80e7611a43e; Hm_lpvt_b5f82f8b48cb1b9d3aa2d563ead70066=1715258206; Hm_lpvt_ebdae93fc0f3ab51e390feccb7dd3e14=1715258206; Hm_lpvt_723370d3ae383d003bd1044420f79bab=1715258207; _YS_userAccect=8735b77b-3302-42c2-9aa7-a02fa171620b; _Collect_SN=0; Hm_lpvt_789fd650fa0be6a2a064d019d890b87f=1715258218'
+  cookie_get: 'acw_tc=3ccdc16117156680638587872e0bedea5e1d6718da1651a3ea162027139357; projectlib-securitycas-cookie=9b4a003e-58c4-4bd9-b869-59f1e7b50cfb; Hm_lvt_b5f82f8b48cb1b9d3aa2d563ead70066=1715668070; Hm_lvt_ebdae93fc0f3ab51e390feccb7dd3e14=1715668070; Hm_lvt_789fd650fa0be6a2a064d019d890b87f=1715668071; Hm_lvt_723370d3ae383d003bd1044420f79bab=1715668071; _Collect_ISNEW=1715668090319; _Collect_UD=bcd6a260-83ae-40f5-b716-ca517718cf0a; _Collect_SN=0; SESSION=NzI3ODA5YjgtODVhNC00YzFiLTg2NzAtZWE2ZjAxODlmZDc2; _YS_userAccect=914ba6e7-f1ab-43cb-b13b-9a30516344aa; Hm_lpvt_789fd650fa0be6a2a064d019d890b87f=1715668100; Hm_lpvt_ebdae93fc0f3ab51e390feccb7dd3e14=1715668100; Hm_lpvt_b5f82f8b48cb1b9d3aa2d563ead70066=1715668100; Hm_lpvt_723370d3ae383d003bd1044420f79bab=1715668100'
+
+
+topics:
+  0: ['国防安全', '驾驶安全', '乘车行走安全', '网络诈骗', '数据安全', '通信安全','疾病预防', '公共卫生紧急响应', '食品数量与可持续安全', '食品质量安全', '气象灾害', '地质灾害', '人为事故灾害', '公共秩序维护', '公共安全与公民权益', '特殊领域治安管理', '治安防控与犯罪预防', '社会治安综合治理']
+  1: ['土地评估与利用', '土地市场管理', '耕地保护', '地质调查、矿产资源勘察', '矿产资源开发利用', '海洋经济发展', '海域海岛管理', '海洋预警监测', '水权管理', '水资源开发利用', '光热资源', '降水资源', '风能及大气成分资源']
+  2: ['养老保险', '失业保险', '工伤保险', '医疗保险', '生育保险', '老年人社会福利', '儿童社会福利', '残疾人社会福利', '优抚安置', '灾害救助', '流浪乞讨人员救助', '社会互助', '住房公积金', '经济适用、廉租住房', '就业服务和管理', '职业技能认证培训', '劳动权益保护']
+  3: ['文化遗产保护', '文化交流', '文化活动', '文化产业', '竞技体育', '群众体育', '体育产业', '旅游宣传', '旅游资源设施管理', '旅游管理与服务']
+  4: ['人口管理', '社区管理', '工农业', '财税金融', '商贸流通', '房地产', '科技创新', '城市基础设施建设', '城市规划', '城市土地资源管理', '公共设施管理', '园林绿化管理', '市容及环境卫生管理', '噪音管理']
+  5: ['学前教育', '义务教育', '高中教育', '职业教育', '高等教育', '特殊教育', '招生报名', '学籍管理', '教育资助与救助', '教师职称评审', '教师资格认定', '教师培训', '普通话水平测试及推广', '语言文字活动及竞赛', '教育督导', '中外合作办学', '留学生管理']
+  6: ['医院管理', '诊所管理', '急救管理', '疾病预防管理', '卫生宣传', '卫生检疫', '心理健康', '药品研制和注册', '药品质量监控', '药物价格监管', '计划生育', '医疗器械']
+  7: ['生态文明示范创建', '生态保护监管', '生物多样性保护', '重点流域保护修复', '地表水水质监测与治理', '海洋生态保护与环境质量管理', '大气质量监测', '工业交通排放治理', '温室气体控制及应对气候变化','土壤生态环境管理', '固体废物管理', '化学品管理']
+  
+theme1:
+  0: '公共安全'
+  1: '自然资源'
+  2: '人力资源和社会保障'
+  3: '文体旅游'
+  4: '城市管理'
+  5: '教育管理'
+  6: '医疗健康'
+  7: '生态环境保护'
